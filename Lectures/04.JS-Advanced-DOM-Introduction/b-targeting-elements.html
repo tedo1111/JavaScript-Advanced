@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target HTML Elements</title>
+</head>
+
+<body>
+    <h1 class="heading">Hello World!</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, ullam.</p>
+
+    <h3 class="heading">Shopping List</h3>
+    <ul class="shopping-list">
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li id="favourite-food">Meat</li>
+        <li>Vegetables</li>
+    </ul>
+
+    <script>
+        let favouriteFoodLiElement = document.getElementById('favourite-food');
+
+        console.log(favouriteFoodLiElement.textContent);
+
+        setTimeout(() => {
+            favouriteFoodLiElement.textContent = 'Stake';
+        }, 3000);
+
+        let liElements = document.getElementsByTagName('li');
+        console.log(liElements);
+
+        let headingElements = document.getElementsByClassName('heading');
+        console.log(headingElements);
+
+        let listHeadingElement = document.querySelector('h3.heading');
+        console.log(listHeadingElement);
+
+        let shoppingListElements = document.querySelectorAll('.shopping-list li');
+        console.log(shoppingListElements);
+
+        // Iterate through HTMLElements and NodeList
+        for (const liElement of liElements) {
+            console.log(liElement);
+        }
+
+        // Access element of HTMLElements and NodeList
+        console.log(shoppingListElements[2]);
+
+        // Convert to an array
+        let liElementsArr = Array.from(shoppingListElements);
+        let liElementsArr2 = [...liElements]; // Don't do this at home! for now (because of Judge)
+        console.log(liElementsArr);
+
+        // Get parent element of a child
+        let parentElement = favouriteFoodLiElement.parentElement;
+        console.log(parentElement);
+
+        // Get children elements
+        let childElements = parentElement.children;
+        console.log(childElements);
+    </script>
+</body>
+
+</html>

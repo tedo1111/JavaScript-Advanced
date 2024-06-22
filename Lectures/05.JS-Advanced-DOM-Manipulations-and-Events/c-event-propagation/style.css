@@ -1,0 +1,18 @@
+.orange {
+    background: orange;
+    display: block;
+    width: 70vw;
+    height: 70vh;
+}
+
+.green {
+    background: green;
+    display: block;
+    width: 40vw;
+    height: 40vh;
+}
+
+.yellow {
+    background: yellow;
+    display: block;
+}

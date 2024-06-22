@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+</head>
+<body>
+    <h1>Web Components</h1>
+
+    <fancy-paragraph>Neshto tuk</fancy-paragraph>
+
+    <script>
+        class FancyParagraph extends HTMLElement {
+            constructor() {
+                super();
+
+                this.textContent = 'Custom text here';
+            }
+        }
+
+        customElements.define('fancy-paragraph', FancyParagraph)
+    </script>
+</body>
+</html>
